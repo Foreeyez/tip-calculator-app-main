@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    max-width: auto;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    align-items: center;
+    background-color: hsl(185, 41%, 84%);
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: row;
+    background-color: whitesmoke;
+    padding: 2rem;
+    border-radius: .5rem;
+}
+
+.one {
+    width: 20rem;
+}
+
+.two {
+    width: 20rem;
+    background-color: hsl(183, 100%, 15%);
+    padding: 2rem;
+    border-radius: .5rem;
+}
+
+
+.column {
+    display: inline-flex;
+    flex-direction: column;
+    margin-bottom: 1.5rem;
+}
+
+.column-flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 200px;
+}
+
+.space {
+    position: relative;
+    height: 2rem;
+    width: 260px;
+    border-radius: .5rem;
+    border: .5px solid;
+    text-align: end;
+}
+
+.space::placeholder {
+    text-align: start;
+}
+
+#custom{
+    height: 2rem;
+    width: 80px;
+    border-radius: .2rem;
+    border: .5px solid hsl(185, 41%, 84%);
+    text-align: end;
+    color: hsl(183, 100%, 15%);
+}
+
+.tip-grid {
+    display: grid;
+    grid-template-columns: 25% 25% 25%;
+    gap: 10px;
+    margin-bottom: 1.5rem;
+}
+
+.tip-grid  div {
+    color: white;
+    background-color: hsl(183, 100%, 15%);
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: .2rem;
+}
+
+.two-flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.shift {
+    margin-top: 1rem;
+}
+
+.btn {
+    display: inline-block;
+    border: none;
+    cursor: pointer;
+    border-radius: 0.2rem;
+    text-align: center;
+    background-color: hsl(172, 67%, 45%);
+    color: hsl(183, 100%, 15%);
+    padding: .5rem 0;
+}
+
+
+a {
+    text-decoration: none;
+    color: hsl(183, 100%, 15%);
+}
+/* Mobile View */
+@media screen and (min-width:200px) and (max-width:870px)
+{
+body {
+    max-width: auto;
+    background-color: hsl(185, 41%, 84%);
+    display: flex;
+    justify-content: center;
+    min-height: auto;
+    align-items: center;
+    width: 100%;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: fit-content;
+    box-shadow: none;
+    margin-top: 3rem;
+}
+}

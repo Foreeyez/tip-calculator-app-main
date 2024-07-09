@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | Tip calculator app</title>
+  <script>
+            function findpercent(t){
+            let bill = document.getElementById("bill").value;
+            tipamount = (bill * t )/100;
+           return document.getElementById("tipamt").innerHTML = "$" + tipamount;
+        }
+            function findtotal(a){
+            let nop = document.getElementById("nop").value;
+            total = nop * tipamount;
+           return document.getElementById("sum-tot").innerHTML = "$" + total;
+        }
+
+  </script>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="one">
+  <div class="column">
+    <label for="bill">Bill</label >
+    <input id="bill" type="number" class="space" placeholder="$"></input>
+  </div>
+
+  <p style="width: 260px;">Select Tip %</p>
+  <div class="tip-grid">
+  <div onclick="findpercent(5)">5%</div>
+  <div onclick="findpercent(10)">10%</div>
+  <div onclick="findpercent(15)">15%</div>
+  <div onclick="findpercent(25)">25%</div>
+  <div onclick="findpercent(50)">50%</div>
+  <div><input type="number" id="custom" onclick="findpercent(document.getElementById('custom').value)" placeholder="Custom"></input></div>
+  </div>
+  
+  <div class="column">
+    <label for="nop">Number of People</label >
+    <input type="number" class="space" id="nop" onclick="findtotal(document.getElementById('nop').value)" placeholder=""></input>
+  </div>
+  </div>
+  <div class="two">
+    <div class="column-flex">
+    <div>
+    <div class="two-flex">
+    <div>
+  <p style="color: hsl(185, 41%, 84%);">Tip Amount</p>
+  <span style="color: hsl(186, 14%, 43%);">/ person</span>
+    </div>
+    <div><h1 id="tipamt" style="color: hsl(172, 67%, 45%)">$0.00</h1></div>
+  </div>
+  <div class="two-flex shift">
+  <div>
+  <p style="color: hsl(185, 41%, 84%);">Total</p>
+  <span style="color: hsl(186, 14%, 43%);">/ person</span>
+  </div>
+    <div><h1 id="sum-tot" style="color: hsl(172, 67%, 45%)">$0.00</h1></div>
+  </div>
+  </div>
+  <div class="btn"><a href="index.html">Reset</a></div>
+  </div>
+  </div>
+  </div>
+</body>
+</html>
